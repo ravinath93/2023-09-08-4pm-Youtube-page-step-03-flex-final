@@ -1,0 +1,331 @@
+
+/* ################# General section  */
+p{
+  font-family: Helvetica,Arial,  sans-serif;
+  margin: 0;
+}
+
+body{
+  padding-bottom: 3000px;
+  margin: 0;
+  padding-top: 80px;
+  padding-left:96px ;
+  padding-right: 24px;
+  background-color: bisque;
+}
+
+
+/* ################# header section  */
+
+.header{
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(194, 193, 193);
+  
+}
+
+.left-section{
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+  /* width: 150px; */
+  align-items: center;
+  justify-content: ;
+}
+
+/* middle section එකේ  max-width: කියන්නේ screen එක පොඩි එකේ ඉදන් ලොකු කරන් එනකොට  max-width: දාපු ගානට පස්සේ ලොකු වෙන්නේ නැහැ ඒ සීමාවෙන් නවතිනවා ... */
+.middle-section{
+  background-color: greenyellow;
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.hamburger-menu{
+  height: 24px;
+  margin: 0 24px 0 24px;
+}
+
+.youtube-logo{
+  height: 20px;
+}
+
+.search-button{
+  width: 60px;
+  height: 40px;
+  background-color: rgb(241, 241, 241);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(170, 169, 169);
+  margin-left: -1px  ;
+  margin-right: 12px; 
+}
+
+.search-button, .voice-search-button{
+  position: relative;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip {
+  position: absolute;
+  bottom: -30PX;
+  background-color: #606060;
+  color: white;
+  padding: 4PX  8PX;
+  border-radius: 2PX;
+  opacity: 0;
+  transition: opacity 1.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip {
+  opacity: 1;
+}
+
+.search-icon{
+  height: 25px;
+  margin-top: 4px;
+}
+
+.voice-search-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(241, 241, 241) ;
+}
+
+.voice-search-icon{
+height: 24 px;
+margin-top: 4px;
+}
+
+/* width: 0; දැම්ම කුඩා කරනකොට පොඩි shrink වෙන්න size එක  */
+.search-bar{
+ flex: 1;
+ height: 34px;
+ padding: 0 0  0 12px ; 
+ font-size: 16px;
+ color: red;
+ border-width:1px ;
+ border-style: solid;
+ border-color: rgb(173, 173, 173);
+ border-radius: 2px;
+ box-shadow:inset 1px 2px 5px  rgba(0,0,0,0.05);
+ width: 0;
+}
+
+.search-bar::placeholder{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+                  /* right-section */
+  /* flex-shrink: 0; දාල තියෙන්නේ   */
+ .right-section{
+  background-color: lightblue;
+  width: 180px;
+  margin: 0 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.upload-icon{
+  height: 24px;
+}
+.youtube-apps-icon{
+  height: 24px;
+}
+.notifications-icon{
+  height: 24px;
+}
+.current-user-picture{
+  height: 32px;
+  border-radius: 16px;
+}
+
+.notifications-icon-container{
+  position: relative;
+}
+.notifications-count{
+  position: absolute;
+  top: -3px;
+  right: -1px;
+
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 1px 4px; 
+  border-radius: 100%;
+}
+
+
+
+/* ################# video section  */
+
+.thumbnail{
+width: 100%;
+object-fit: contain;
+display:block;
+}
+
+
+.video-title{
+  /* width: 200px; */
+  margin: 0 0 12px 0;
+font-size: 14px;
+font-weight: bold;
+line-height: 20px;
+}
+
+.video-author, .video-stats{
+  display: block;
+}
+
+.vide0-prview{  
+}
+
+.channel-picture{
+  background-color: red;
+  }
+
+.video-info{
+  background-color: orange;
+  }
+
+.profile-picture{
+  width: 100%;
+  border-radius: 100%;
+}
+
+.thumbnail-row{
+  margin: 0 0 12px 0;
+  position: relative;
+}
+
+.video-time{
+  background-color: black;
+  color: white;
+  padding: 3px 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.video-author, .video-stats{
+  font-size: 12px;
+  color: #606060;
+}
+
+.video-author{
+  margin: 0 0 4px 0;
+}
+
+.video-info-grid{
+  background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 50px;
+}
+
+/* flex grid එක සමානව 1fr 1fr 1fr වලට කැඩෙනවා කියල තමයි deafualt දීල තියෙන්නේ ..
+380px අඩුවෙනකොට 1fr වලට කැඩෙනවා..  */
+@media (max-width:380px){
+  .video-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width:381px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:601px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media (min-width:1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* <!-- side bar --> */
+
+.sidebar{
+ background-color: blueviolet;
+ /* background-color: white; */
+ width: 72px;
+
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ top: 55px;
+ z-index: 2;
+}
+
+.sidebar-link{
+  background-color: lightgrey;
+  height: 74px;
+  margin: 0 0 1px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-link:hover{
+  background-color: yellow;
+}
+
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.sidebar p{
+  color: blue;
+  font-size: 10px;
+}
+
